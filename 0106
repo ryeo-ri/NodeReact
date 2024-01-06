@@ -87,7 +87,9 @@ const http = require('http');
 웹 서버 생성 
 ==================================
 const server = http.createServer();
+server.listen();
 ==================================
+
 
 2. npm의 통해 설치한 외부 패키지
 패스르 명시하지 않아도 무방
@@ -99,3 +101,28 @@ const cookie = require('cookie')
 반드시 패스 명시
 
 
+
+*주요객체
+1. server 객체 
+웹서버를 생성할때 사용 
+2. response 객체
+응답 메시지를 작성할 때 request이벤트 리스너의 두번째 매개변수로 전달
+3. request 객체
+응답 메시지를 작성할 때 request이벤트 리스너의 첫번째 매개변수로 전달
+
+
+const http  = requier("http");
+const server = http.createServer(function(req,res){
+
+    }
+);
+server.listen (port,callback);
+
+*server 객체 메서드
+1. listen (port,callback) : 첫번째 매개 변수 (포트)로 서버실행
+
+server.listen(3000,function(){
+    console.log ('3000번포트로 서버가 실행되었습니다.')
+})
+
+2. close(callback) : 서버 종료 
