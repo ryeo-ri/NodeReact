@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script>
+
+        function print(){
+    
+            const score = document.querySelector('#score').value;
+            let a = document.querySelector('#a');
+    
+            if(score >= 90){
+                a.innerText='A';
+            }else if(score >= 80){
+                a.innerText='B';
+            }else if(score >= 70){
+                a.innerText='C';           
+            }else if(score >= 60){
+                a.innerText='D';
+            }else if(score >= 0){
+                a.innerText='F';
+            }else{
+                a.innerText='Error';
+            }
+        
+        }
+
+        
+    </script> 
+    <input id="score" type="text"> </input> <button onclick="print()">확인</button>
+    
+    <p id="a"></p>
+
+
+
+</body>
+</html>
+
+Node 
+* REPL
+1. 읽기(Read), 해석(Eval), 결과반환(Print), 종료까지 반복(Loop)
+2. 브라우저의 콘솔 처럼 노드 콘솔 기능 제공 
+
+a = "1"
+b = 2
+
+형변환 자바스크립트 
+Number(a) 
+
+*js파일 불러오기
+1. 콘솔
+> node 파일명.js 
+- 해당 파일 load 후 자동으로 종료
+- 확장자 뒤에 ";" 생략
+
+2. REPL세션 
+require("./파일명.js")
