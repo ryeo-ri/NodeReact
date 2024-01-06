@@ -126,3 +126,14 @@ server.listen(3000,function(){
 })
 
 2. close(callback) : 서버 종료 
+
+*response 객체 메서드
+1. writeHead(statusCode, statusMessage, headers) : 응답헤더 작성
+2. end(data, encoding, callback) : 응답 본문 작성
+
+const http = requier("http")
+const server = http.createServer(function(req,res){
+//request, response
+res.writeHead(200,{'Content-type':'text/html'})
+res.end('<h1>Hello World!!</h1>')
+})
