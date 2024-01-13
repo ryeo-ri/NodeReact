@@ -1,0 +1,69 @@
+npm을 이용한 Create React App 설치 
+
+Create React APP
+> npm install -g create-react-app
+
+맥사용자 권한거부 permission denied시 
+> sudo npm -g create-react-app
+운영체제 로그인 비밀번호 입력 
+
+설치확인
+> create-react-app -v
+
+npm vs npx
+
+npm : 프로그램 설치
+npx : 해당 프로그램을 한 번만 설치 후 자동삭제 
+- 컴퓨터 공간 낭비 방지
+- 설치시 마다 새로 다운로드 받기 때문에 항상 최신상태 유지 
+
+
+개발 환경 준비하기
+개발에 사용할 디렉토리 생성
+- 디렉토리명으로 react 사용불가
+터미널또는 cmd에서 디렉토리로 이동
+cd 명령어 + 경로
+cd 명령어 + 디렉토리를 콘솔로 드래그앤 드롭 
+
+프로젝트 생성 명령 입력
+create-react-app [프로젝트명]
+create-react-app .(현재 디렉토리에 설치)
+
+샘플 앱 실행 
+npm run start 또는 npm start : 자동실행
+자동 실행되지 않는 경우 터미널에 출력된 주소를 ctrl(또는 a/t)누른 채 클릭
+
+
+
+디렉토리 구조 이해하기 
+프로젝트 생성 시 자동으로 폴더 및 파일 생성
+
+public 
+-프로젝트 실행 시 보여질 화면과 파일 생성
+public\index.html : 브라우저에 출력
+
+src 
+- 프로젝트 개발 시 코드 작성할 파일 생성
+src\app.js : 코드개발 
+src\index.js : 개발된 코드를 index.html으로 전달
+
+
+jsx : html코드를 스크립트에서 사용할 수 있다.
+class명을 호출시 className="" 이라고 적어야함.
+
+React규칙 
+파일명 대문자
+
+
+내부 명령어
+>npm 
+  npm start
+  -react 실행 
+  npm run build
+  -build 파일 생성 
+
+>npm install -g serve
+  serve (-s) build
+  -build 파일 실행 
+
+
